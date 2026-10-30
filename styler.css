@@ -1,0 +1,462 @@
+/* ==========================================================================
+   Variabel Warna & Font
+   ========================================================================== */
+:root {
+    --primary-brown: #3E2723;   /* Cokelat Kopi Pekat */
+    --accent-gold: #C67C4E;      /* Warna Karamel / Emas Warm */
+    --warm-cream: #FDFBF7;       /* Krem Latar Belakang */
+    --light-cream: #F5EBE1;      /* Krem Kartu */
+    --text-dark: #2C1D11;        /* Teks Gelap */
+    --text-muted: #6D5C50;       /* Teks Sekunder */
+    --font-heading: 'Cinzel', serif;
+    --font-body: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Base Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--warm-cream);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header & Navigasi */
+.navbar {
+    background-color: rgba(62, 39, 35, 0.95);
+    backdrop-filter: blur(8px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 15px 0;
+    border-bottom: 2px solid var(--accent-gold);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #fff;
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.logo-icon {
+    font-size: 1.5rem;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-menu a {
+    color: #E0D5C1;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: var(--accent-gold);
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    background: linear-gradient(rgba(44, 29, 17, 0.85), rgba(44, 29, 17, 0.85)), 
+                radial-gradient(circle, #5D4037 0%, #2C1D11 100%);
+    color: #fff;
+    padding: 100px 0 120px 0;
+    text-align: center;
+    border-bottom: 4px solid var(--accent-gold);
+}
+
+.badge-tradisi {
+    display: inline-block;
+    color: var(--accent-gold);
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.hero h1 {
+    font-family: var(--font-heading);
+    font-size: 2.8rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero h1 .highlight {
+    color: var(--accent-gold);
+}
+
+.hero p {
+    max-width: 650px;
+    margin: 0 auto 35px auto;
+    color: #D7CCC8;
+    font-size: 1.1rem;
+}
+
+.hero-cta {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+/* Tombol */
+.btn-primary, .btn-primary-sm {
+    background-color: var(--accent-gold);
+    color: #fff;
+    padding: 12px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary-sm {
+    padding: 8px 18px;
+    font-size: 0.9rem;
+}
+
+.btn-primary:hover, .btn-primary-sm:hover {
+    background-color: #b0693d;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    border: 2px solid var(--accent-gold);
+    color: #fff;
+    padding: 12px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: var(--accent-gold);
+}
+
+/* Section Features */
+.features {
+    padding: 80px 20px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: var(--primary-brown);
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    color: var(--text-muted);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.feature-card {
+    background-color: #fff;
+    padding: 35px 25px;
+    border-radius: 12px;
+    border: 1px solid #EFE6DD;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.feature-card h3 {
+    font-family: var(--font-heading);
+    color: var(--primary-brown);
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* Section Produk */
+.products-section {
+    background-color: var(--primary-brown);
+    padding: 80px 0;
+    color: #fff;
+}
+
+.section-title.light h2 {
+    color: var(--accent-gold);
+}
+
+.section-title.light p {
+    color: #D7CCC8;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background-color: #4E342E;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #6D4C41;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: var(--accent-gold);
+    color: #fff;
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.product-img-placeholder {
+    height: 160px;
+    background-color: #3E2723;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    border-bottom: 1px solid #5D4037;
+}
+
+.product-info {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.product-info h3 {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    color: #FFF8E7;
+}
+
+.product-info p {
+    color: #BCAAA4;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.product-price {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--accent-gold);
+    margin-bottom: 15px;
+}
+
+.product-price span {
+    font-size: 0.85rem;
+    color: #A1887F;
+    font-weight: 400;
+}
+
+.btn-card {
+    display: block;
+    text-align: center;
+    background-color: transparent;
+    border: 1px solid var(--accent-gold);
+    color: var(--accent-gold);
+    padding: 10px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-card:hover {
+    background-color: var(--accent-gold);
+    color: #fff;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 80px 20px;
+}
+
+.contact-box {
+    background-color: var(--light-cream);
+    border: 2px dashed var(--accent-gold);
+    border-radius: 16px;
+    padding: 50px 30px;
+    text-align: center;
+}
+
+.contact-box h2 {
+    font-family: var(--font-heading);
+    color: var(--primary-brown);
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.contact-box p {
+    color: var(--text-muted);
+    margin-bottom: 30px;
+}
+
+.btn-whatsapp {
+    display: inline-block;
+    background-color: #25D366;
+    color: #fff;
+    padding: 14px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.05rem;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-whatsapp:hover {
+    background-color: #1eb957;
+    transform: translateY(-2px);
+}
+
+/* Error Page Specific Styles */
+.error-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--primary-brown);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.error-card {
+    background-color: #4E342E;
+    border: 2px solid var(--accent-gold);
+    padding: 50px 30px;
+    border-radius: 16px;
+    max-width: 500px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.error-code {
+    font-family: var(--font-heading);
+    font-size: 5rem;
+    color: var(--accent-gold);
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.error-card h1 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.error-card p {
+    color: #D7CCC8;
+    margin-bottom: 30px;
+}
+
+/* Footer */
+footer {
+    background-color: #2C1D11;
+    color: #A1887F;
+    padding: 30px 0;
+    font-size: 0.9rem;
+    border-top: 1px solid #3E2723;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.footer-links a {
+    color: #A1887F;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.footer-links a:hover {
+    color: var(--accent-gold);
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none; /* Dapat disesuaikan dengan menu burger jika diperlukan */
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-cta {
+        flex-direction: column;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links a {
+        margin: 0 10px;
+    }
+}
